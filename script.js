@@ -10,6 +10,7 @@ function showPage(targetId) {
 function showFromHash() {
   const hash = window.location.hash.replace("#", "");
   const map = {
+    "home": "page-home",
     "poem-1": "page-poem-1",
     "poem-2": "page-poem-2",
     "why-this-project": "page-why",
