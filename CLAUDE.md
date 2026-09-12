@@ -8,7 +8,9 @@ This is a minimal static site with no build tooling, package manager, or test fr
 
 ## Structure
 
-- `index.html` — the single page. It links `styles.css`, which does not exist yet in the repo.
+- `index.html` — single-page app shell: fixed top bar, left sidebar nav, and a main content area with `.page` sections (`page-home`, `page-poem-1`, `page-poem-2`) toggled by JS. Poem translation content is currently blank placeholders.
+- `styles.css` — all styling (white background, Times New Roman, black/white/beige button theme).
+- `script.js` — hash-based routing (`#poem-1`, `#poem-2`) that shows/hides `.page` sections; no page reloads, so the top bar never moves.
 
 ## Working locally
 

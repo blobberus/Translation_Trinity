@@ -3,10 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Site</title>
+  <title>HUM16100 Translation Trinity</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>SIX SEVEN!!!!</h1>
+
+  <header class="topbar">
+    <span class="topbar-title">
+      <span class="title-main">HUM16100 Translation Trinity:</span>
+      <span class="title-sub">Du Fu's Poems in the Artificial Mind</span>
+    </span>
+  </header>
+
+  <div class="layout">
+
+    <div class="sidebar-wrapper" id="sidebarWrapper">
+      <nav class="sidebar">
+        <a class="nav-link" href="#poem-1" data-target="page-poem-1">Poem 1</a>
+        <a class="nav-link" href="#poem-2" data-target="page-poem-2">Poem 2</a>
+        <a class="nav-link" href="#why-this-project" data-target="page-why">Why This Project?</a>
+        <a class="nav-link" href="#works-cited" data-target="page-works-cited">Works Cited</a>
+      </nav>
+    </div>
+    <button class="sidebar-tab" id="sidebarTab" type="button" aria-label="Toggle navigation menu" aria-expanded="true">&lsaquo;</button>
+
+    <main class="main-content">
+
+      <section id="page-home" class="page">
+        <h1 class="home-title">
+          <span class="title-main">HUM16100 Translation Trinity:</span>
+          <span class="title-sub">Du Fu's Poems in the Artificial Mind</span>
+        </h1>
+        <div class="poem-buttons">
+          <a class="poem-button" href="#poem-1" data-target="page-poem-1">Poem 1</a>
+          <a class="poem-button" href="#poem-2" data-target="page-poem-2">Poem 2</a>
+        </div>
+        <p class="credit-text">Poems by Du Fu (杜甫, Dù Fǔ), human translation by Bynner, and translator LLM fine-tuning + website by Nathan Kim.</p>
+      </section>
+
+      <section id="page-poem-1" class="page" hidden>
+        <h2 class="poem-title">Poem 1</h2>
+        <div class="poem-content"></div>
+      </section>
+
+      <section id="page-poem-2" class="page" hidden>
+        <h2 class="poem-title">Poem 2</h2>
+        <div class="poem-content"></div>
+      </section>
+
+      <section id="page-why" class="page" hidden>
+        <h2 class="poem-title">Why This Project?</h2>
+        <div class="poem-content"></div>
+      </section>
+
+      <section id="page-works-cited" class="page" hidden>
+        <h2 class="poem-title">Works Cited</h2>
+        <div class="poem-content"></div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

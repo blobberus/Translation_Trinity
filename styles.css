@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-bottom: 1px solid #000000;
+  padding: 12px 16px;
+  z-index: 100;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.title-main {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.title-sub {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+}
+
+.topbar-title .title-main {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.topbar-title .title-sub {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  margin-top: 84px;
+  min-height: calc(100vh - 84px);
+}
+
+.sidebar-wrapper {
+  flex-shrink: 0;
+  width: 200px;
+  overflow: hidden;
+  transition: width 0.25s ease;
+}
+
+.sidebar-wrapper.collapsed {
+  width: 0;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #000000;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-tab {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 48px;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 0 6px 6px 0;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  z-index: 60;
+  transition: left 0.25s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-tab.collapsed {
+  left: 0;
+}
+
+.sidebar-tab:hover {
+  background: #e8dcc3;
+  color: #000000;
+}
+
+.nav-link,
+.poem-button {
+  display: block;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.poem-button:hover {
+  background: #e8dcc3;
+  color: #000000;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+}
+
+.home-title {
+  text-align: center;
+  margin: 24px auto 40px;
+  max-width: 900px;
+  line-height: 1.25;
+}
+
+.home-title .title-main {
+  display: block;
+  font-size: 3rem;
+}
+
+.home-title .title-sub {
+  display: block;
+  font-size: 2rem;
+}
+
+.poem-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.poem-buttons .poem-button {
+  width: 260px;
+}
+
+.credit-text {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 28px;
+}
+
+.poem-title {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+}
+
+.poem-content {
+  min-height: 200px;
+}
