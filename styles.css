@@ -47,17 +47,19 @@ body {
 }
 
 .layout {
-  position: relative;
-  display: flex;
   margin-top: 84px;
   min-height: calc(100vh - 84px);
 }
 
 .sidebar-wrapper {
-  flex-shrink: 0;
+  position: fixed;
+  top: 84px;
+  left: 0;
+  bottom: 0;
   width: 200px;
   overflow: hidden;
   transition: width 0.25s ease;
+  z-index: 40;
 }
 
 .sidebar-wrapper.collapsed {
@@ -76,7 +78,7 @@ body {
 }
 
 .sidebar-tab {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 200px;
   transform: translateY(-50%);
@@ -107,7 +109,9 @@ body {
 }
 
 .nav-link,
-.poem-button {
+.poem-button,
+.dropdown-toggle,
+.dropdown-item {
   display: block;
   background: #000000;
   color: #ffffff;
@@ -121,14 +125,21 @@ body {
 }
 
 .nav-link:hover,
-.poem-button:hover {
+.poem-button:hover,
+.dropdown-toggle:hover,
+.dropdown-item:hover {
   background: #e8dcc3;
   color: #000000;
 }
 
 .main-content {
-  flex: 1;
+  margin-left: 200px;
   padding: 32px;
+  transition: margin-left 0.25s ease;
+}
+
+body.sidebar-collapsed .main-content {
+  margin-left: 0;
 }
 
 .home-title {
@@ -166,10 +177,182 @@ body {
 }
 
 .poem-title {
-  font-size: 1.75rem;
+  text-align: center;
+  font-size: 2.25rem;
   margin-bottom: 24px;
 }
 
-.poem-content {
-  min-height: 200px;
+.original-poem {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.original-line {
+  margin-bottom: 10px;
+}
+
+.chinese-line,
+.zh {
+  font-family: "Fontquan-XinYiJiXiangSong", "Times New Roman", Times, serif;
+}
+
+.chinese-line {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.pinyin-line {
+  display: block;
+  font-size: 0.8rem;
+  color: #333333;
+  margin-top: 2px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #000000;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.translation-dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.dropdown-toggle {
+  width: 300px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 20;
+}
+
+.translation-dropdown.dropdown-up .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+}
+
+.translation-dropdown:hover .dropdown-menu,
+.translation-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  width: 100%;
+  white-space: normal;
+  font-size: 0.9rem;
+}
+
+.translation-output {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.translation-title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.translation-poem {
+  line-height: 1.8;
+}
+
+.methodology-box {
+  border: 1px solid #000000;
+  max-width: 650px;
+  margin: 28px auto 0;
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.methodology-title {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 0 0 6px;
+}
+
+.methodology-subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #333333;
+  margin: 0 0 16px;
+}
+
+.methodology-box p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.methodology-box p:last-child {
+  margin-bottom: 0;
+}
+
+.manual-methodology {
+  margin: 24px auto 28px;
+}
+
+.placeholder-text {
+  color: #666666;
+}
+
+.edit-note {
+  font-size: 0.8rem;
+  color: #333333;
+}
+
+#why-this-project-content {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.works-cited-heading {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 36px 0 16px;
+}
+
+.works-cited-heading:first-child {
+  margin-top: 0;
+}
+
+.works-cited-subheading {
+  text-align: center;
+  font-size: 1.05rem;
+  font-style: italic;
+  margin: 8px 0 12px;
+}
+
+.works-cited-note {
+  max-width: 650px;
+  margin: 0 auto 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.citation-list {
+  max-width: 700px;
+  margin: 0 auto 8px;
+  text-align: left;
+}
+
+.citation {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }

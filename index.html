@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HUM16100 Translation Trinity</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-fontquan-xin-yi-ji-xiang-song-regular@1/font.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,8 +21,8 @@
     <div class="sidebar-wrapper" id="sidebarWrapper">
       <nav class="sidebar">
         <a class="nav-link" href="#home" data-target="page-home">Home</a>
-        <a class="nav-link" href="#poem-1" data-target="page-poem-1">Poem 1</a>
-        <a class="nav-link" href="#poem-2" data-target="page-poem-2">Poem 2</a>
+        <a class="nav-link" href="#poem-1" data-target="page-poem-1">Moonlit Night: <span class="zh">月夜</span></a>
+        <a class="nav-link" href="#poem-2" data-target="page-poem-2">Spring Scene: <span class="zh">春望</span></a>
         <a class="nav-link" href="#why-this-project" data-target="page-why">Why This Project?</a>
         <a class="nav-link" href="#works-cited" data-target="page-works-cited">Works Cited</a>
       </nav>
@@ -36,30 +37,128 @@
           <span class="title-sub">Du Fu's Poems through the Artificial Mind</span>
         </h1>
         <div class="poem-buttons">
-          <a class="poem-button" href="#poem-1" data-target="page-poem-1">Poem 1</a>
-          <a class="poem-button" href="#poem-2" data-target="page-poem-2">Poem 2</a>
+          <a class="poem-button" href="#poem-1" data-target="page-poem-1">Moonlit Night: <span class="zh">月夜</span></a>
+          <a class="poem-button" href="#poem-2" data-target="page-poem-2">Spring Scene: <span class="zh">春望</span></a>
         </div>
         <p class="credit-text">Poems by Du Fu (杜甫, Dù Fǔ), human translation by Bynner, and translator LLM fine-tuning + website by Nathan Kim.</p>
       </section>
 
       <section id="page-poem-1" class="page" hidden>
-        <h2 class="poem-title">Poem 1</h2>
-        <div class="poem-content"></div>
+        <h2 class="poem-title">Moonlit Night: <span class="zh">月夜</span></h2>
+
+        <div class="original-poem">
+          <div class="original-line"><span class="chinese-line">今夜鄜州月</span><span class="pinyin-line">Jīn yè Fūzhōu yuè</span></div>
+          <div class="original-line"><span class="chinese-line">闺中只独看</span><span class="pinyin-line">Guī zhōng zhǐ dú kàn</span></div>
+          <div class="original-line"><span class="chinese-line">遥怜小儿女</span><span class="pinyin-line">Yáo lián xiǎo ér nǚ</span></div>
+          <div class="original-line"><span class="chinese-line">未解忆长安</span><span class="pinyin-line">Wèi jiě yì Cháng'ān</span></div>
+          <div class="original-line"><span class="chinese-line">香雾云鬟湿</span><span class="pinyin-line">Xiāng wù yún huán shī</span></div>
+          <div class="original-line"><span class="chinese-line">清辉玉臂寒</span><span class="pinyin-line">Qīng huī yù bì hán</span></div>
+          <div class="original-line"><span class="chinese-line">何时倚虚幌</span><span class="pinyin-line">Hé shí yǐ xū huǎng</span></div>
+          <div class="original-line"><span class="chinese-line">双照泪痕干</span><span class="pinyin-line">Shuāng zhào lèi hén gān</span></div>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="translation-dropdown">
+          <button class="dropdown-toggle gradient-hover" type="button">Select Translation Method &#9662;</button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item gradient-hover" data-poem="poem-1" data-method="bynner">Human Translation: Bynner</button>
+            <button class="dropdown-item gradient-hover" data-poem="poem-1" data-method="rhyme">Musician</button>
+            <button class="dropdown-item gradient-hover" data-poem="poem-1" data-method="meaning">Etymologist</button>
+            <button class="dropdown-item gradient-hover" data-poem="poem-1" data-method="korean">Trilingualist</button>
+          </div>
+        </div>
+
+        <div class="translation-output" id="output-poem-1"></div>
       </section>
 
       <section id="page-poem-2" class="page" hidden>
-        <h2 class="poem-title">Poem 2</h2>
-        <div class="poem-content"></div>
+        <h2 class="poem-title">Spring Scene: <span class="zh">春望</span></h2>
+
+        <div class="original-poem">
+          <div class="original-line"><span class="chinese-line">国破山河在</span><span class="pinyin-line">Guó pò shān hé zài</span></div>
+          <div class="original-line"><span class="chinese-line">城春草木深</span><span class="pinyin-line">Chéng chūn cǎo mù shēn</span></div>
+          <div class="original-line"><span class="chinese-line">感时花溅泪</span><span class="pinyin-line">Gǎn shí huā jiàn lèi</span></div>
+          <div class="original-line"><span class="chinese-line">恨别鸟惊心</span><span class="pinyin-line">Hèn bié niǎo jīng xīn</span></div>
+          <div class="original-line"><span class="chinese-line">烽火连三月</span><span class="pinyin-line">Fēng huǒ lián sān yuè</span></div>
+          <div class="original-line"><span class="chinese-line">家书抵万金</span><span class="pinyin-line">Jiā shū dǐ wàn jīn</span></div>
+          <div class="original-line"><span class="chinese-line">白头搔更短</span><span class="pinyin-line">Bái tóu sāo gèng duǎn</span></div>
+          <div class="original-line"><span class="chinese-line">浑欲不胜簪</span><span class="pinyin-line">Hún yù bù shèng zān</span></div>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="translation-dropdown">
+          <button class="dropdown-toggle gradient-hover" type="button">Select Translation Method &#9662;</button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item gradient-hover" data-poem="poem-2" data-method="bynner">Human Translation: Bynner</button>
+            <button class="dropdown-item gradient-hover" data-poem="poem-2" data-method="rhyme">Musician</button>
+            <button class="dropdown-item gradient-hover" data-poem="poem-2" data-method="meaning">Etymologist</button>
+            <button class="dropdown-item gradient-hover" data-poem="poem-2" data-method="korean">Trilingualist</button>
+          </div>
+        </div>
+
+        <div class="translation-output" id="output-poem-2"></div>
       </section>
 
       <section id="page-why" class="page" hidden>
         <h2 class="poem-title">Why This Project?</h2>
-        <div class="poem-content"></div>
+        <div class="poem-content" id="why-this-project-content">
+          <p class="placeholder-text"> </p> <p style="text-indent: 40px;"> Through the course of Media Aesthetics II, I have come to an understanding that text is built on a foundation of cultural and learned meaning. In other words, text in itself doesn't hold significant meaning. This has made the practice of translation far more ambiguous to me--if the signifiers are arbitrary and entirely built on a culture of understanding, how can a foreign culture's language perfectly capture it's essence? Therefore, for my final project, I decided to task myself with experimenting with two concepts: practicing translation as a procedural task with rules and practicing translation with the transformer ["computer language"] as the intermediary. <br> 
+            <p style="text-indent: 40px;"> Translation as a procedural task has already been a professional practice for centuries. One of the most challenging domains of translation is found in poetry (as learned through class with Du Fu and a multitude of translations of his work). I challenged myself to capture and train a model to procedurally perform translations using specific guidelines that are built through creating a fine-tuning training dataset. The greatest challenges of this task were: finding proper training data, formatting and cleaning training data, and maintaining translation quality without having the LLM regurgitate existing translations. Without getting too technical, training data was creataed by making 1-10 translations for every word in 10 dictionaries (either from Chinese-Enlish Korean-English, or Chinese-Korean). These lists were verified using a script that called a GPT API. The procedures (which are detailed under each translation under "Translation Model Methodology") were inspired from translators such as Bynner from the Du Fu translation packet given in class. In order to prevent the LLMs from copying existing translation, before the model releases a response, a GAN (an opposing model) compares the generated translation to the top 30 translation queries found on Google. Given a +40% token match and a +80% semantics match, the response is rejected and the model is prompted to create another translation with greater randomness by increasing the temperature. <br>
+            <p style="text-indent: 40px;"> A topic that has interested me since learning about text in Media Aesthetics is how LLMs can inform our understanding of language in an objective way. LLMs, like humans, understand language as signifiers. However, unique to humans, they do not have comprehension of their signifiers. Since LLMs are entirely trained on text data extracted from the internet (and even images being reduced to numbers that they must find patterns in), their perception of language is totally abstract. Following that line of logic, LLMs in the act of translation could provide insight that cannot be found in people. Because a lot of human translation lies in associating how different signifiers refer to different signified objects, humans are partially distracted by the real world to create purly textual translation. However, LLMs are fully reliant on text--all the association an LLM makes is based on associations of words. Studying how LLMs navigate translation can reveal hidden connections between language and words that can only be seen through a brain that thinks exclusively with text--and That is why translation of poetry through LLMs is compelling to me.    </p>
+        </div>
       </section>
 
       <section id="page-works-cited" class="page" hidden>
         <h2 class="poem-title">Works Cited</h2>
-        <div class="poem-content"></div>
+        <div class="poem-content">
+
+          <h3 class="works-cited-heading">Du Fu Poems</h3>
+          <div class="citation-list">
+            <p class="citation">Du Fu. “月夜” [Moonlit Night]. In <em>Quan Tang Shi</em> [Complete Tang Poems]. Chinese Text Project. Accessed September 13, 2026. https://ctext.org/datawiki.pl?if=en&amp;res=329941.</p>
+            <p class="citation">Du Fu. “春望” [Spring View]. In <em>Quan Tang Shi</em> [Complete Tang Poems]. Chinese Text Project. Accessed September 13, 2026. https://ctext.org/datawiki.pl?if=en&amp;res=329941.</p>
+          </div>
+
+          <h3 class="works-cited-heading">Bynner Translations</h3>
+          <div class="citation-list">
+            <p class="citation">Bynner, Witter, and Kiang Kang-hu, trans. “On a Moonlit Night.” By Du Fu. In <em>The Jade Mountain: A Chinese Anthology, Being Three Hundred Poems of the T’ang Dynasty, 618–906</em>. New York: Alfred A. Knopf, 1929. Accessed September 13, 2026. https://archive.org/details/jademountainchin00heng.</p>
+            <p class="citation">Bynner, Witter, and Kiang Kang-hu, trans. “A Spring View.” By Du Fu. In <em>The Jade Mountain: A Chinese Anthology, Being Three Hundred Poems of the T’ang Dynasty, 618–906</em>. New York: Alfred A. Knopf, 1929. Accessed September 13, 2026. https://archive.org/details/jademountainchin00heng.</p>
+          </div>
+
+          <h3 class="works-cited-heading">Sources of Data for Translation</h3>
+
+          <h4 class="works-cited-subheading">Chinese → English</h4>
+          <div class="citation-list">
+            <p class="citation">ZDIC. “汉典 (Hanzi Dictionary).” Accessed September 13, 2026. https://www.zdic.net/.</p>
+            <p class="citation">MDBG. “MDBG Chinese–English Dictionary.” Accessed September 13, 2026. https://www.mdbg.net/chinese/dictionary.</p>
+            <p class="citation">Collins Dictionary. “Collins Chinese–English Dictionary.” Accessed September 13, 2026. https://www.collinsdictionary.com/dictionary/chinese-english.</p>
+            <p class="citation">Oxford Learner’s Dictionaries. “Hairpin.” Accessed September 13, 2026. https://www.oxfordlearnersdictionaries.com/definition/english/hairpin.</p>
+          </div>
+
+          <h4 class="works-cited-subheading">Chinese → Korean</h4>
+          <div class="citation-list">
+            <p class="citation">Daum. “Daum Chinese Dictionary (중국어사전).” Accessed September 13, 2026. https://small.dic.daum.net/index.do?dic=ch.</p>
+            <p class="citation">Daum. “Daum Hanja Dictionary (한자사전).” Accessed September 13, 2026. https://dic.daum.net/index.do?dic=hanja.</p>
+            <p class="citation">National Institute of Korean Language. “Korean–Chinese Learners’ Dictionary.” Accessed September 13, 2026. https://krdict.korean.go.kr/chn/mainAction.</p>
+          </div>
+
+          <h4 class="works-cited-subheading">Korean → English</h4>
+          <div class="citation-list">
+            <p class="citation">National Institute of Korean Language. “Korean–English Learners’ Dictionary.” Accessed September 13, 2026. https://krdict.korean.go.kr/eng/mainAction.</p>
+            <p class="citation">Collins Dictionary. “Collins Korean–English Dictionary.” Accessed September 13, 2026. https://www.collinsdictionary.com/dictionary/korean-english.</p>
+            <p class="citation">Lingrow. “Korean Dictionary: 안개 (‘mist’).” Accessed September 13, 2026. https://lingrow.io/tools/korean/dictionary/%EC%95%88%EA%B0%9C.</p>
+          </div>
+
+          <h3 class="works-cited-heading">AI Training Models</h3>
+          <p class="works-cited-note">Qwen3.8, Hugging Face, and Claude Opus were used exclusively to optimize the site and to train the translation models Musician, Etymologist, and Trilingualist.</p>
+          <div class="citation-list">
+            <p class="citation">Alibaba Cloud. “Qwen3.8.” Large language model. Accessed September 13, 2026. https://huggingface.co/Qwen.</p>
+            <p class="citation">Hugging Face. “Hugging Face — The AI Community Building the Future.” AI model hosting platform. Accessed September 13, 2026. https://huggingface.co.</p>
+            <p class="citation">Anthropic. “Claude Opus.” Large language model. Accessed September 13, 2026. https://www.anthropic.com/claude.</p>
+          </div>
+
+        </div>
       </section>
 
     </main>
